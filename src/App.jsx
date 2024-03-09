@@ -19,7 +19,7 @@ function App() {
              <Header/>
              <ChatBox/>
           </div>
-        <div className="bg-green-400 max-w-sm flex-1">
+        <div className="max-w-sm flex-1">
         <Recipient/>
         </div>
          </main>
