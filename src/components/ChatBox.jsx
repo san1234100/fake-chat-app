@@ -6,7 +6,6 @@ const ChatBox = ({msgList}) => {
   const arr=[<UserChat msg={"Hello"} date={date}/>,<RecipientChat msg={"Hello"} date={date}/>]
   return (
     <main>
-      {/* rounded-b-xl */}
     <div className=" p-5 bg-[url('./src/assets/images/chatBg.png')] bg-cover h-[450px]">
      {msgList.map(val=>val)} 
     </div>
