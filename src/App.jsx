@@ -10,6 +10,10 @@ function App() {
   const [headerData,setHeaderData] = useState({userName:"Unknown",lastseen:"last seen at 11:30 AM",time:"12:40"})
   const [batteryPercent,setbatteryPercent] = useState("60");
   const [mobileNetwork,setMobileNetwork] = useState("4G");
+  const [userMsg,setUserMsg] = useState("");
+  const [recipientMsg,setRecipientMsg] = useState("");
+  const [msgList,setMsgList] = useState([])
+
   return (
     <>  
     <div className="h-screen bg-[#124076] p-5">
@@ -23,6 +27,10 @@ function App() {
          setbatteryPercent={setbatteryPercent}
          mobileNetwork={mobileNetwork}
          setMobileNetwork={setMobileNetwork}
+         userMsg={userMsg}
+         setUserMsg={setUserMsg}
+         msgList={msgList}
+         setMsgList={setMsgList}
          />
          </div>
          <div className="h-fit max-w-sm mx-auto flex-1">
@@ -31,10 +39,17 @@ function App() {
              batteryPercent={batteryPercent}
              mobileNetwork={mobileNetwork}
              />
-             <ChatBox/>
+             <ChatBox
+             msgList={msgList}
+             />
           </div>
         <div className="max-w-sm flex-1">
-        <Recipient/>
+        <Recipient
+        recipientMsg={recipientMsg}
+        setRecipientMsg={setRecipientMsg}
+        msgList={msgList}
+        setMsgList={setMsgList}
+        />
         </div>
          </main>
     </div>
