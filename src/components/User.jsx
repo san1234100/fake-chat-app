@@ -12,7 +12,6 @@ const User = ({
 }) => {
   const handleInput = (e) => {
     const { name, value } = e.target;
-    console.log(name, value);
     setHeaderData({ ...headerData, [name]: value });
   };
   return (

@@ -7,9 +7,9 @@ import User from "./components/User"
 
 function App() {
  
-  const [headerData,setHeaderData] = useState({userName:"",lastseen:"",time:""})
-  const [batteryPercent,setbatteryPercent] = useState("");
-  const [mobileNetwork,setMobileNetwork] = useState("");
+  const [headerData,setHeaderData] = useState({userName:"Unknown",lastseen:"last seen at 11:30 AM",time:"12:40"})
+  const [batteryPercent,setbatteryPercent] = useState("60");
+  const [mobileNetwork,setMobileNetwork] = useState("4G");
   return (
     <>  
     <div className="h-screen bg-[#124076] p-5">
@@ -26,7 +26,11 @@ function App() {
          />
          </div>
          <div className="h-fit max-w-sm mx-auto flex-1">
-             <Header/>
+             <Header
+             headerData={headerData}
+             batteryPercent={batteryPercent}
+             mobileNetwork={mobileNetwork}
+             />
              <ChatBox/>
           </div>
         <div className="max-w-sm flex-1">
