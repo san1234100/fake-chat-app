@@ -1,4 +1,4 @@
-const FormInput = ({label,name,type,placeholder}) => {
+const FormInput = ({label,name,type,placeholder,headerData,handleOnChange}) => {
   return (
     <div className="flex flex-col space-y-1 my-3">
       <label htmlFor={name}>{label}</label>
@@ -7,7 +7,8 @@ const FormInput = ({label,name,type,placeholder}) => {
         id={name}
         name={name}
         placeholder={placeholder}
-        value={""}
+        onChange={handleOnChange}
+        value={headerData}
         className="px-4 py-2 bg-gray-200 rounded outline-none accent-blue-500"
       />
     </div>
