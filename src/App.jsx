@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>  
-    <div className="h-screen bg-[#124076] p-5">
+    <div className="h-fit bg-[#124076] p-10 pb-20">
           <h1 className="text-white font-semibold text-3xl pb-10">Fake Chat App</h1>
          <main className="flex">
          <div className="flex-1 max-w-sm">
@@ -52,7 +52,11 @@ function App() {
         />
         </div>
          </main>
+ 
     </div>
+    <footer className="bg-[#124076] p-3 text-center text-white">
+          <p>CopyRights &copy; - 2024 | Developed by Sanjeev</p>
+   </footer>
     </>
   )
 }
